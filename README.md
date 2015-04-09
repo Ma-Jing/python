@@ -3,7 +3,12 @@ python script that common use
 
 1、dns_refresh.py
 
-To keep some domain hot on specify local dns.
+To keep some domain hot on specify local dns. 
+
+Every valid domain-dns pair will create a thread.
+
+When execute the script, the function setdaemon will fork a subprocess to run all threads, the main process will exit.
+
 
 Useage:
 
