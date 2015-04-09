@@ -83,7 +83,6 @@ class per_dns_refresh_thread(threading.Thread):
         errors = 0
 
         while True:
-            #logger.error("dns querying")
             cmd = 'dig %s @%s >/dev/null 2>&1' % (self.domain,self.dns)
             status = commands.getstatusoutput(cmd)[0]
             counter = counter -1
@@ -135,6 +134,6 @@ def generate():
         t.join()
 
 if __name__ == '__main__':
-    #setdaemon()
+    setdaemon()
     generate()
 
