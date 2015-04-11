@@ -12,9 +12,9 @@ When execute the script, the function setdaemon will fork a subprocess to run al
 
 ###Useage:
 
-(1) Edit the variable "logfile" to store the error infomation.
+(1) Edit the variable 'logfile' to store the error infomation.
 
-(2) Edit the list "dnss" to specify the local dns.
+(2) Edit the list 'dnss' to specify the local dns.
 
 (3) Edit the domains to specify the domains you want to keep hot.
 
