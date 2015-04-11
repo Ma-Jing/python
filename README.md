@@ -1,5 +1,5 @@
 # python
-python script that common use
+Python script that common use
 
 ## 1、dns_refresh.py
 
