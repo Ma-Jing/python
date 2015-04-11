@@ -8,6 +8,7 @@ import commands
 import threading
 from logging.handlers import RotatingFileHandler
 
+
 logwd = '/data/proclog'
 if not os.path.exists(logwd):
     os.makedirs(logwd)
@@ -24,7 +25,6 @@ if (hasattr(os, "devnull")):
     NULL_DEVICE = os.devnull
 else:
     NULL_DEVICE = "/dev/null"
-
 
 def _redirectFileDescriptors():
     """
@@ -126,7 +126,7 @@ retries = 3 # retry times when judge if a dns is bad
 interval = 0.1 # every domain-dns pair refresh interval 
 badtimes = 60 # in a thread, if query badtimes continuous, destroy thread.
 
-def generate():
+def generateTask():
     threads = []
     domains_dict = cleandns(domains,dnss,retries)
     for k, v in domains_dict.iteritems():
@@ -142,6 +142,6 @@ def generate():
         t.join()
 
 if __name__ == '__main__':
-    #setdaemon()
-    generate()
+    setdaemon()
+    generateTask()
 
