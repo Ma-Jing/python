@@ -34,8 +34,8 @@ When execute the script, the function setdaemon will fork a subprocess to run al
     UserParameter=nginx_channel_traffic[*],curl -s http://127.0.0.1:8888/$1 2>/dev/null
 3. 在zabbix前端配置监控项目：
     + 监控项key: 为nginx_channel_traffic[www.test.com]
-+ 数据类型：选择数字
-+ 单位bps
-+ 使用自定义倍数 8
-+ 数据更新间隔: 300 (*可以根据实际情况修改*)
-+ 储存值: 差量（每秒速率）
+    + 数据类型：选择数字
+    + 单位bps
+    + 使用自定义倍数 8
+    + 数据更新间隔: 300 (*可以根据实际情况修改*)
+    + 储存值: 差量（每秒速率）
