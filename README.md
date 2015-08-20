@@ -23,7 +23,7 @@ When execute the script, the function setdaemon will fork a subprocess to run al
 
 ## 2、nginx_traffic_daemon.py
 
-提供一个当前�域名实时流量的查询接口，可以通过zabbix或其他监控软件，实时监控域名的访问带宽和流量信息；
+提供一个指定域名实时流量的查询接口，可以通过zabbix或其他监控软件，实时监控域名的访问带宽和流量信息；
 
 配置方法：
 
