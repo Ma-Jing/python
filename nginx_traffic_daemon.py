@@ -12,7 +12,7 @@ import sys
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 from SocketServer import ThreadingMixIn
 
-__authors__ = ['majing <majing@staff.sina.com.cn>']
+__authors__ = ['majing <majing168cool@126.com>']
 __version__ = "1.1"
 __date__ = "Aug 14, 2015"
 __license__ = "GPL license"
@@ -75,7 +75,7 @@ def python_daemon():
         os._exit(1)
 
 
-logfile = '/data0/log/sinaedge/esnv2/access.log'
+logfile = '/data/www/log/nginx/access.log'  # 修改为自己的日志位置
 if not os.path.isfile(logfile):
     os._exit(1)
 
