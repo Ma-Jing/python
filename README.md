@@ -1,5 +1,5 @@
 # python
-Python scripts that common use.
+一些python的小脚本
 
 ## 1、dns_refresh.py
 
@@ -30,8 +30,10 @@ When execute the script, the function setdaemon will fork a subprocess to run al
 以监控www.test.com域名带宽为例；
 
 1. 在web服务器上部署脚本，执行python nginx_traffic_daemon.py启动，启动后，脚本通过fork()的方式常驻后台；
+
 2. 如该服务器已经部署zabbix_agentd，编辑zabbix_agentd.conf文件，添加一个自定义监控项
     UserParameter=nginx_channel_traffic[*],curl -s http://127.0.0.1:8888/$1 2>/dev/null
+
 3. 在zabbix前端配置监控项目：
     + 监控项key: 为nginx_channel_traffic[www.test.com]
     + 数据类型：选择数字
