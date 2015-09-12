@@ -21,7 +21,7 @@ When execute the script, the function setdaemon will fork a subprocess to run al
 4. Edit the interval to specify the interval time for same domain-dns pair refresh.
 
 
-## 2、nginx_traffic_daemon.py
+## 2、ngxv2_traffic_daemon.py
 
 提供一个指定域名实时流量的查询接口，可以通过zabbix或其他监控软件，实时监控域名的访问带宽和流量信息；
 
