@@ -44,9 +44,7 @@ def _redirectFileDescriptors():
 
 
 def python_daemon():
-    """
-    Make program run on daemon mode.
-    """
+    """Make program run on daemon mode."""
     if os.name != 'posix':
         print 'Daemon is only supported on Posix-compliant systems.'
         os._exit(1)
@@ -112,10 +110,8 @@ def analysis_and_format_log():
             else:
                 channel_traffics[channel] = int(transfer_bytes)
         except StopIteration, e:
-            '''
-            if log rotated, clear channel_traffics dict;
-            then close old generator, start a new lines generator.
-            '''
+            '''if log rotated, clear channel_traffics dict;
+            then close old generator, start a new lines generator.'''
             sourcelines.close()
             channel_traffics.clear()
             sourcelines = logtailer(logfile)
@@ -124,7 +120,7 @@ def analysis_and_format_log():
 
 
 class GetChannelBandHandler(BaseHTTPRequestHandler):
-    ''' a interface for query a channel current traffic'''
+    '''a interface for query a channel current traffic'''
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
