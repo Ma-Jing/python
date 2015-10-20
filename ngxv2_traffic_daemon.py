@@ -13,11 +13,6 @@ from os import stat
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 from SocketServer import ThreadingMixIn
 
-__authors__ = ['majing <majing@staff.sina.com.cn>']
-__version__ = "1.1"
-__date__ = "Aug 14, 2015"
-__license__ = "GPL license"
-
 if (hasattr(os, "devnull")):
     NULL_DEVICE = os.devnull
 else:
@@ -76,7 +71,7 @@ def python_daemon():
         os._exit(1)
 
 
-logfile = '/data0/log/sinaedge/esnv2/access.log'
+logfile = '/data/www/access.log'
 if not os.path.isfile(logfile):
     os._exit(1)
 
